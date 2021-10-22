@@ -37,7 +37,7 @@ def query_sql():
                 {}.INFORMATION_SCHEMA.COLUMNS c
             ORDER BY [TABLE_NAME],[COLUMN_NAME] asc;
             """.format(schema)
-    print("querying db1..")
+    print("querying sql server..")
     # read into dataframe
     query = pd.read_sql_query(sql, conn)
     df = pd.DataFrame(query)
@@ -46,7 +46,7 @@ def query_sql():
     # print("col name ", df.iat[v,2])
     return(df)
 
-# function to QUERY FROM POSTGRES MYTUKAR DATAMART
+# function to QUERY FROM POSTGRES
 def query_postgres():
     # connect to server, query and close the connection
     key = '''DSN=;UID=;PWD='''
